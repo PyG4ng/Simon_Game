@@ -10,7 +10,7 @@ $(document).on("keypress", () => {
     }
 })
 
-$(document).on("click", () => {
+document.querySelector("body").addEventListener("click", () => {
     if (level === 0) {
         nextSequence();
     }
