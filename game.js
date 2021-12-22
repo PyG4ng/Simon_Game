@@ -10,6 +10,12 @@ $(document).on("keypress", () => {
     }
 })
 
+$(document).on("click", () => {
+    if (level === 0) {
+        nextSequence();
+    }
+})
+
 
 function nextSequence() {
     var randomNumber = Math.floor(Math.random() * 4);
@@ -81,7 +87,7 @@ function checkAnswer(currentLevel) {
     } else {
         gameover();
         startOver();
-        
+
         console.log("wrong");
         // console.log("count " + count)
         // console.log("userPatern " + userClickedPattern)
