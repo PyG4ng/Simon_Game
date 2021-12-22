@@ -10,7 +10,8 @@ $(document).on("keypress", () => {
     }
 })
 
-document.querySelector("body").addEventListener("click", () => {
+
+document.querySelector("#level-title").addEventListener("click", () => {
     if (level === 0) {
         nextSequence();
     }
@@ -77,8 +78,7 @@ function animatePress(currentColour) {
 
 function checkAnswer(currentLevel) {
     if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
-        // count++;
-        console.log("success");
+        // console.log("success");
 
         if (userClickedPattern.length === gamePattern.length) {
             setTimeout(nextSequence, 1000);
@@ -88,7 +88,7 @@ function checkAnswer(currentLevel) {
         gameover();
         startOver();
 
-        console.log("wrong");
+        // console.log("wrong");
         // console.log("count " + count)
         // console.log("userPatern " + userClickedPattern)
         // console.log("gamePatern " + gamePattern)
@@ -106,9 +106,8 @@ function gameover() {
         $("body").removeClass("game-over");
     }, 200);
 
-    $("h1").text("Game Over, Press Any Key to Restart");
+    $("h1").text("Game Over, click me or press any Key to Restart");
 
-    
 }
 
 
